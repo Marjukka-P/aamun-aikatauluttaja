@@ -1,0 +1,107 @@
+canvas {
+    background-color:transparent;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+    
+}
+button {
+    font-size:24px;
+    border-radius:25%;
+    align-self:auto;
+}
+
+.laskuri{
+    font-size: 15px;
+    line-height: 0px;
+}
+
+.pienikello{
+    width: 15%;
+    height: 15%;
+    border-radius: 30%;
+}
+.nuoli{
+    width: 15%;
+    height: 15%;
+}
+.kello{
+    width: 35%;
+    height: 35%;
+}
+.muna{
+    width: 20%;
+    height: 20%;
+}
+.harjaus{
+    width: 25%;
+    height: 25%;
+}
+.kouluun{
+    width: 15%;
+    height: 15%;
+}
+
+.clock {
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    width: 85%
+    /* line-height: 50px; */
+    font-size: 40px;
+    background-color: white;
+}
+input{
+    width: 65px; 
+    border: none;
+    font-size: 30px; 
+    font-weight: bold;
+    color: black;
+}
+img{
+    width: 90%;
+}
+
+.yhteystiedot{
+    background-color: rgb(108, 162, 203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% ;
+}
+
+.alaosa{
+    background-color: lightyellow;
+}
+.ylaosa{
+    /* display: flex; */
+
+}
+
+.bgimg, .bgimg2 {
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+.otsikko{
+    font-size: 64px;
+    text-align: center;
+    padding-top: 10%;
+    color: white;
+}
+
+.pvm2{
+    font-size: 34px;
+    text-align: center;
+    color: black;
+}
+
+

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fi-FI">
+<title>VAPP2</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="vapp_muotoilu.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
+<style>
+body,h1,h2{font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+p {line-height: 2}
+/* .bgimg {background-image:url("hiiri.jpg")} */
+</style>
+
+<body onload ="pvm()">
+   <header>
+    <h1 class="pvm2" id="date"></h1>   
+    <canvas id="canvas" width="100" height="100"></canvas> 
+  </header>
+  
+ <!-- Navbar (sticky bottom) -->
+ <!-- <div class="w3-bottom w3-hide-small"> -->
+  <!-- <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off"> -->
+    <div class="w3-bottom" role="navigation">
+
+    <a href="#animaatio" style="width:25%" class="w3-bar-item w3-button">Tehtävä</a>
+    <a href="#ytiedot" style="width:25%" class="w3-bar-item w3-button">Tuotteen tarjoaa</a>
+    <a href="#kiitokset" style="width:25%" class="w3-bar-item w3-button w3-hover-black">Kuvien lähteet</a>
+    <a href="vapp_etusivu_3.1.html" style="width: 25%"  class="w3-bar-item w3-button w3-hover-black">Etusivulle</a>
+  </div>
+
+
+ <!-- Tehtäväalue -->
+<div id="animaatio" role="article"> 
+     
+    <div class="clock"> 
+        <h2 id="kehotus">Aloita hampaiden harjaus!</h2>
+        <div id="vaihda"><img class="harjaus" src="hampaat.png" title="Klikkaa kuvaa, kun aloitat" alt ="aamupala" onclick="countdown()"></div>
+        <div id="timeBox"> 
+          <h3 id="keskeyta">Aikaa jäljellä</h3>
+          <p class="laskuri"> Minuutteja: </p> <input id="min" type="text">                 
+          <p class="laskuri"> Sekunteja: </p> <input id="sec" type="text"> 
+          <p id="msg"></p>
+        </div>
+
+        <div id= "countdown"></div>
+        <div id="hymynappula"><img class="pienikello" src="kouluun.png" alt="tehtävä suoritettu"  title="Valmis siirtymään tähän tehtävään?" onclick= "kehuminen();"> </div>
+       <a id="jatkosivu" href='vapp_sivu3_3.1.html'></a>
+    </div> 
+</div> 
+
+<!-- Kolmas suuri alue -->
+<div id="ytiedot" class="yhteystiedot">
+  <p class="w3-xlarge">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px" >Yhteystiedot</button>
+    <br>
+    <br> 
+  <a href="vapp_etusivu_3.1.html" title="Etusivulle">
+    <img class="logo" src="logos.jpg" alt="Etusivulle / logo">
+  </a>
+  </p>
+</div>
+
+<!-- Yhteystietoruutu -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+    <div class="w3-container w3-white w3-center">
+      <h1 class="w3-wide"> Marjukka Pihlajamäki</h1>
+      <p>linkedin.com/in/marjukka-pihlajamäki-655564197<br> email: pihlajamakimarjukka@gmail.com</p>
+      <img src="logos.jpg" alt="logo">      
+    </div>
+
+    <div class="w3-half">
+      <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-green">Sulje ruutu</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer id="kiitokset" class="alaosa">
+  <h3>Kuvien lähteet:</h3>
+    Kuva <a href="https://pixabay.com/fi/users/Clker-Free-Vector-Images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=24404">Clker-Free-Vector-Images</a> <a href="https://pixabay.com/fi/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=24404"> 
+     // Kuva <a href="https://pixabay.com/fi/users/Westfrisco-5450454/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2351803">Natalia Ovcharenko</a> <a href="https://pixabay.com/fi/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2351803">Pixabaystä</a>
+     // Kuva <a href="https://pixabay.com/fi/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=678967">Gerd Altmann</a> <a href="https://pixabay.com/fi/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=678967">Pixabaystä</a>
+     // Kuva jaettu kahtia <a href="https://pixabay.com/fi/users/GraphicMama-team-2641041/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1460960">GraphicMama-team</a> <a href="https://pixabay.com/fi/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1460960">Pixabaystä</a>
+     // Kuva <a href="https://pixabay.com/fi/users/OpenClipart-Vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160172">OpenClipart-Vectors</a> <a href="https://pixabay.com/fi/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=160172">Pixabaystä // </a>
+     <a target="_blank" href="https://icons8.com/icons/set/arrow--v1">Arrow icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8 // </a>
+     <a target="_blank" href="/icons/set/trust">Trust icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8/logon kuva</a>
+    <br>
+    <br>
+    <br>
+<div> <br> <br> </div>
+  </footer>
+<script src="vapp_funktiot.js"></script> 
+
+    
+<!-- countdown -->
+<script>
+  var mins = 1; 
+ var secs = mins * 60; 
+ function countdown() { 
+     setTimeout('Decrement()', 60); 
+  } 
+  function Decrement() { 
+minutes = document.getElementById("min"); 
+seconds = document.getElementById("sec");
+if (seconds < 59) { 
+    seconds.value = secs; 
+} 
+else { 
+    minutes.value = getMinutes(); 
+    seconds.value = getSeconds(); 
+    document.getElementById("msg").innerHTML = "Klikkaa seuraavan tehtävän kuvaa, kun olet valmis";
+}
+if (secs < 50) { 
+    minutes.style.color = "red"; 
+    seconds.style.color = "red";
+    document.getElementById("msg").innerHTML = "HOP HOP!!"; 
+} 
+if (mins < 0) { 
+    // alert('Aika loppui');
+    minutes.value = '00'; 
+    seconds.value = '00';
+    myohassa();
+
+}
+else { 
+   secs--; 
+   setTimeout('Decrement()', 1000); 
+} 
+}
+function getMinutes() { 
+   mins = Math.floor(secs / 60); 
+   return mins; 
+} 
+function getSeconds() { 
+   return secs - Math.round(mins * 60); 
+}
+
+
+</script>
+
+
+<!-- kellotaulu -->
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+drawFace(ctx, radius);
+drawNumbers(ctx, radius);
+drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+var grad;
+ctx.beginPath();
+ctx.arc(0, 0, radius, 0, 2*Math.PI);
+ctx.fillStyle = 'white';
+ctx.fill();
+grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+grad.addColorStop(0, '#333');
+grad.addColorStop(0.5, 'white');
+grad.addColorStop(1, '#333');
+ctx.strokeStyle = grad;
+ctx.lineWidth = radius*0.1;
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+ctx.fillStyle = '#333';
+ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+var ang;
+var num;
+ctx.font = radius*0.15 + "px arial";
+ctx.textBaseline="middle";
+ctx.textAlign="center";
+for(num = 1; num < 13; num++){
+ang = num * Math.PI / 6;
+ctx.rotate(ang);
+ctx.translate(0, -radius*0.85);
+ctx.rotate(-ang);
+ctx.fillText(num.toString(), 0, 0);
+ctx.rotate(ang);
+ctx.translate(0, radius*0.85);
+ctx.rotate(-ang);
+}
+}
+
+function drawTime(ctx, radius){
+var now = new Date();
+var hour = now.getHours();
+var minute = now.getMinutes();
+var second = now.getSeconds();
+//hour
+hour=hour%12;
+hour=(hour*Math.PI/6)+
+(minute*Math.PI/(6*60))+
+(second*Math.PI/(360*60));
+drawHand(ctx, hour, radius*0.5, radius*0.07);
+//minute
+minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+drawHand(ctx, minute, radius*0.8, radius*0.07);
+// second
+second=(second*Math.PI/30);
+drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+ctx.beginPath();
+ctx.lineWidth = width;
+ctx.lineCap = "round";
+ctx.moveTo(0,0);
+ctx.rotate(pos);
+ctx.lineTo(0, -length);
+ctx.stroke();
+ctx.rotate(-pos);
+}
+</script>    
+
+
+
+</html>
